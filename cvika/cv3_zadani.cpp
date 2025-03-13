@@ -4,6 +4,7 @@
 #define GL_SILENCE_DEPRECATION
 #include <GLUT/glut.h>
 #include <cmath>
+
 bool trianglestrip = true;
 int window1, window2, window3, winWidth;
 
