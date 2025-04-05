@@ -1,0 +1,3 @@
+/Users/hedweger/Vut/mgr-second/mpg/projekt/build/CMakeFiles/mpg-proj.dir
+/Users/hedweger/Vut/mgr-second/mpg/projekt/build/CMakeFiles/edit_cache.dir
+/Users/hedweger/Vut/mgr-second/mpg/projekt/build/CMakeFiles/rebuild_cache.dir
