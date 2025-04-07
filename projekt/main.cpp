@@ -1,8 +1,9 @@
 #define GL_SILENCE_DEPRECATION
+#include <GLUT/glut.h>
+
 #include "include/hdr/bezier.h"
 #include "include/hdr/draw.h"
 #include "include/hdr/input.h"
-#include <GLUT/glut.h>
 
 void drawPlane(float size, int div) {
   float step = size / div;
@@ -39,8 +40,7 @@ void setupLight() {
 
 void onResize(int w, int h) {
   // std::cout << "resizing!" << std::endl;
-  if (h == 0)
-    h = 1;
+  if (h == 0) h = 1;
   float aspect = (float)w / (float)h;
 
   glViewport(0, 0, w, h);
@@ -66,7 +66,7 @@ void onDisplay(void) {
 
   glEnable(GL_MAP2_VERTEX_3);
   glEnable(GL_MAP2_TEXTURE_COORD_2);
-  subCasteljau();
+  // subCasteljau();
   drawLeadPoints();
   showMesh();
   glDisable(GL_BLEND);
