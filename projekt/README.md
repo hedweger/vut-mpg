@@ -13,7 +13,7 @@ implementovány):
     - zapnutí, vypnutí textur,
     - ovládání světla (barva, jas),
     - ukončení programu.
-- [ ] Výpis textu (2 b) 
+- [ ] Výpis textu (2 b)
 - [ ] Ruční svítilna (2 b) – Na stisk tlačítka R bude rozsvíceno reflektorové světlo s úzkým poloměrem
 a se středem v pozici kamery.
 - [ ] Blender model (2 b) – Pomocí Blenderu vymodelujte objekt. Vyexportujte souřadnice vertexů,
@@ -31,6 +31,6 @@ uživatel nebude mít pocit, že by zůstal viset nad povrchem (1 b).
 nich klikne myší.
 - [ ] Průhlednost (1 b) – K jednomu objektu přidejte průhlednost.
 - [ ] Neprůchozí objekt (2 b) – Některý z objektů bude neprůchozí (ze všech stran).
-) [ ] Texturování (2 b) – Použijte alespoň jednu texturu externě načítanou (1 b) a alespoň jednu
+- [ ] Texturování (2 b) – Použijte alespoň jednu texturu externě načítanou (1 b) a alespoň jednu
 texturu generovanou kódem (1 b). Textury musí být odlišné od těch prezentovaných na cvičení.
-) [ ] Bézierovy pláty (2 b) – Smysluplné zapojení Bézierových plátů do scény
+- [ ] Bézierovy pláty (2 b) – Smysluplné zapojení Bézierových plátů do scény
