@@ -2,7 +2,6 @@
 #define _DRAW_H_
 
 void drawUnitCube(void);
-void drawUnitRoof(void);
 void drawScaledCube(float x, float y, float z, float size);
 
 #endif

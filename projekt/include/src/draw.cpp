@@ -1,4 +1,4 @@
-#include "draw.h"
+#include "../hdr/draw.h"
 #include <GLUT/glut.h>
 
 void drawScaledCube(float x, float y, float z, float size) {

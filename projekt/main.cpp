@@ -1,5 +1,7 @@
-#include "draw.h"
-#include "input.h"
+#define GL_SILENCE_DEPRECATION
+#include "include/hdr/bezier.h"
+#include "include/hdr/draw.h"
+#include "include/hdr/input.h"
 #include <GLUT/glut.h>
 
 void drawPlane(float size, int div) {
@@ -54,11 +56,22 @@ void onDisplay(void) {
   // std::cout << "displaying!" << std::endl;
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   glLoadIdentity();
+  // glTranslatef(0, 0, tranznew);
+  // glMultMatrixf(rotationmatrix);
 
   updateCamera();
   setupLight();
   drawPlane(100.0f, 100);
   drawScaledCube(10.0f, 1.0f, 0.0f, 5.0f);
+
+  glEnable(GL_MAP2_VERTEX_3);
+  glEnable(GL_MAP2_TEXTURE_COORD_2);
+  subCasteljau();
+  drawLeadPoints();
+  showMesh();
+  glDisable(GL_BLEND);
+
+  drawBezierPlate(50);
 
   glFlush();
   glutSwapBuffers();

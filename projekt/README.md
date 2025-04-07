@@ -8,11 +8,11 @@ stínovány. Je třeba zajistit korektní normálování.
 klávesami ASDW) pohyb dopředu, dozadu a úkroky do stran.
 - [ ] Menu (2 b) obsahující například následující položky (budou-li ve vašem projektu
 implementovány):
-- reset polohy (nastavení kamery na výchozí souřadnice),
-- ovládání animace (zastavení, spuštění),
-- zapnutí, vypnutí textur,
-- ovládání světla (barva, jas),
-- ukončení programu.
+    - reset polohy (nastavení kamery na výchozí souřadnice),
+    - ovládání animace (zastavení, spuštění),
+    - zapnutí, vypnutí textur,
+    - ovládání světla (barva, jas),
+    - ukončení programu.
 - [ ] Výpis textu (2 b) 
 - [ ] Ruční svítilna (2 b) – Na stisk tlačítka R bude rozsvíceno reflektorové světlo s úzkým poloměrem
 a se středem v pozici kamery.

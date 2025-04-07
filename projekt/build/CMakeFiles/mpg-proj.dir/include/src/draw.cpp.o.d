@@ -1,6 +1,6 @@
-CMakeFiles/mpg-proj.dir/main.cpp.o: \
-  /Users/hedweger/Vut/mgr-second/mpg/projekt/main.cpp \
-  /Users/hedweger/Vut/mgr-second/mpg/projekt/include/hdr/bezier.h \
+CMakeFiles/mpg-proj.dir/include/src/draw.cpp.o: \
+  /Users/hedweger/Vut/mgr-second/mpg/projekt/include/src/draw.cpp \
+  /Users/hedweger/Vut/mgr-second/mpg/projekt/include/src/../hdr/draw.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/os/availability.h \
@@ -34,6 +34,4 @@ CMakeFiles/mpg-proj.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/_types/_intmax_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/_types/_uintmax_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glext.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h \
-  /Users/hedweger/Vut/mgr-second/mpg/projekt/include/hdr/draw.h \
-  /Users/hedweger/Vut/mgr-second/mpg/projekt/include/hdr/input.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h

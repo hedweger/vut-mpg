@@ -1,20 +1,18 @@
-#include "input.h"
+#include "../hdr/input.h"
 #include <GLUT/glut.h>
 #include <math.h>
 
+const float MOUSE_SENSITIVITY = 0.0025f;
+const float PITCH_LIMIT = 1.5f;
+
 float camX = 0.0f, camY = 1.8f, camZ = 5.0f;
-float dirX = 0.0f, dirZ = -1.0f, dirY = 0.0f;
-
-int lastMouseX = -1;
-int lastMouseY = -1;
-bool mouseInitialized = false;
-bool ignoreNextMouseWarp = false;
-
+float curX = 0.0f, curZ = -1.0f, curY = 0.0f;
+int oldX = -1, oldY = -1;
 float yaw = 0.0f;
 float pitch = 0.0f;
 
-const float MOUSE_SENSITIVITY = 0.0025f;
-const float PITCH_LIMIT = 1.5f;
+bool mouseInitialized = false;
+bool ignoreNextMouseWarp = false;
 
 void handleMouseMovement(int x, int y) {
   int centerX = glutGet(GLUT_WINDOW_WIDTH) / 2;
@@ -25,15 +23,15 @@ void handleMouseMovement(int x, int y) {
     return;
   }
   if (!mouseInitialized) {
-    lastMouseX = x;
-    lastMouseY = y;
+    oldX = x;
+    oldY = y;
     mouseInitialized = true;
     return;
   }
 
   float sensitivity = 0.005f;
-  int deltaX = x - lastMouseX;
-  int deltaY = y - lastMouseY;
+  int deltaX = x - oldX;
+  int deltaY = y - oldY;
   yaw += deltaX * sensitivity;
   pitch -= deltaY * sensitivity;
 
@@ -42,12 +40,12 @@ void handleMouseMovement(int x, int y) {
   if (pitch < -PITCH_LIMIT)
     pitch = -PITCH_LIMIT;
 
-  dirX = cos(pitch) * sin(yaw);
-  dirY = sin(pitch);
-  dirZ = -cos(pitch) * cos(yaw);
+  curX = cos(pitch) * sin(yaw);
+  curY = sin(pitch);
+  curZ = -cos(pitch) * cos(yaw);
 
-  lastMouseX = x;
-  lastMouseY = y;
+  oldX = x;
+  oldY = y;
 
   ignoreNextMouseWarp = true;
   glutWarpPointer(centerX, centerY);
@@ -56,9 +54,9 @@ void handleMouseMovement(int x, int y) {
 }
 
 void updateCamera() {
-  float centerX = camX + dirX;
-  float centerY = camY + dirY;
-  float centerZ = camZ + dirZ;
+  float centerX = camX + curX;
+  float centerY = camY + curY;
+  float centerZ = camZ + curZ;
 
   gluLookAt(camX, camY, camZ, centerX, centerY, centerZ, 0.0f, 1.0f, 0.0f);
 }
@@ -69,34 +67,34 @@ void processSpecialKey(int key, int x, int y) {
 
 void processKeys(unsigned char key, int x, int y) {
   float speed = 0.5f;
-  float rightX = -dirZ;
-  float rightZ = dirX;
+  float rightX = -curZ;
+  float rightZ = curX;
 
   switch (key) {
   case 27:
     exit(0);
     break;
   case 'w':
-    camX += dirX * speed;
-    camZ += dirZ * speed;
+    camX += curX * speed;
+    camZ += curZ * speed;
     break;
   case 's':
-    camX -= dirX * speed;
-    camZ -= dirZ * speed;
+    camX -= curX * speed;
+    camZ -= curZ * speed;
     break;
   case 'a':
     // angleX -= 0.05f;
     camX -= rightX * speed;
     camZ -= rightZ * speed;
-    // dirX = sin(angle);
-    // dirZ = -cos(angle);
+    // curX = sin(angle);
+    // curZ = -cos(angle);
     break;
   case 'd':
     // angleX += 0.05f;
     camX += rightX * speed;
     camZ += rightZ * speed;
-    // dirX = sin(angle);
-    // dirZ = -cos(angle);
+    // curX = sin(angle);
+    // curZ = -cos(angle);
     break;
   }
 

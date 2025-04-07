@@ -4,10 +4,13 @@ project(mpg-proj)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include_directories(include)
+
 set(SOURCES
   main.cpp
-  input.cpp
-  draw.cpp 
+  include/src/draw.cpp
+  include/src/input.cpp
+  include/src/bezier.cpp
 )
 
 find_package(OpenGL REQUIRED)
