@@ -120,7 +120,7 @@ void onReshape(int w, int h) {
 
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  gluPerspective(40.0, (double)w / h, 0.1, 200.0);
+  gluPerspective(40.0, (double)w / h, 0.001f, 200.0);
 }
 
 void onDisplay(void) {
@@ -150,7 +150,6 @@ void onDisplay(void) {
    glTranslatef(-15, 0, 0);
    glColor3f(1.0f, 0.0f, 0.0f);
    gluSphere(quadric, 5, 20, 20);
-   glTranslatef(0, 0, 0);
   glPopMatrix();
 
   glEnable(GL_TEXTURE_2D);
