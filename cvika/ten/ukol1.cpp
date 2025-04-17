@@ -128,7 +128,6 @@ void onDisplay(void) {
 
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
-  glPushMatrix();
 
   // translace
   glTranslatef(0, 0, tranznew);
@@ -146,18 +145,18 @@ void onDisplay(void) {
   // translaci
 
   glDisable(GL_TEXTURE_2D);
+
   glPushMatrix();
-   glMultMatrixf(rotationmatrix);
-   glTranslatef(-15.0f, 0.0f, 0.0f);
+   glTranslatef(-15, 0, 0);
    glColor3f(1.0f, 0.0f, 0.0f);
    gluSphere(quadric, 5, 20, 20);
-   glPopMatrix();
+   glTranslatef(0, 0, 0);
+  glPopMatrix();
+
   glEnable(GL_TEXTURE_2D);
 
   //   Ukol 1 pokracovani - vytvorte objekty, doplnte aplikace textur a
   //   nastaveni interakce textury s prostredim (glTexEnvi)
-
-  glPopMatrix();
 
   gluDeleteQuadric(quadric);
 
