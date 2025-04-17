@@ -129,101 +129,101 @@ mpg-proj/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/build
 .PHONY : mpg-proj/fast
 
-include/src/bezier.o: include/src/bezier.cpp.o
-.PHONY : include/src/bezier.o
+src/bezier.o: src/bezier.cpp.o
+.PHONY : src/bezier.o
 
 # target to build an object file
-include/src/bezier.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/include/src/bezier.cpp.o
-.PHONY : include/src/bezier.cpp.o
+src/bezier.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/bezier.cpp.o
+.PHONY : src/bezier.cpp.o
 
-include/src/bezier.i: include/src/bezier.cpp.i
-.PHONY : include/src/bezier.i
+src/bezier.i: src/bezier.cpp.i
+.PHONY : src/bezier.i
 
 # target to preprocess a source file
-include/src/bezier.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/include/src/bezier.cpp.i
-.PHONY : include/src/bezier.cpp.i
+src/bezier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/bezier.cpp.i
+.PHONY : src/bezier.cpp.i
 
-include/src/bezier.s: include/src/bezier.cpp.s
-.PHONY : include/src/bezier.s
+src/bezier.s: src/bezier.cpp.s
+.PHONY : src/bezier.s
 
 # target to generate assembly for a file
-include/src/bezier.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/include/src/bezier.cpp.s
-.PHONY : include/src/bezier.cpp.s
+src/bezier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/bezier.cpp.s
+.PHONY : src/bezier.cpp.s
 
-include/src/draw.o: include/src/draw.cpp.o
-.PHONY : include/src/draw.o
+src/cube.o: src/cube.cpp.o
+.PHONY : src/cube.o
 
 # target to build an object file
-include/src/draw.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/include/src/draw.cpp.o
-.PHONY : include/src/draw.cpp.o
+src/cube.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/cube.cpp.o
+.PHONY : src/cube.cpp.o
 
-include/src/draw.i: include/src/draw.cpp.i
-.PHONY : include/src/draw.i
+src/cube.i: src/cube.cpp.i
+.PHONY : src/cube.i
 
 # target to preprocess a source file
-include/src/draw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/include/src/draw.cpp.i
-.PHONY : include/src/draw.cpp.i
+src/cube.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/cube.cpp.i
+.PHONY : src/cube.cpp.i
 
-include/src/draw.s: include/src/draw.cpp.s
-.PHONY : include/src/draw.s
+src/cube.s: src/cube.cpp.s
+.PHONY : src/cube.s
 
 # target to generate assembly for a file
-include/src/draw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/include/src/draw.cpp.s
-.PHONY : include/src/draw.cpp.s
+src/cube.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/cube.cpp.s
+.PHONY : src/cube.cpp.s
 
-include/src/input.o: include/src/input.cpp.o
-.PHONY : include/src/input.o
+src/input.o: src/input.cpp.o
+.PHONY : src/input.o
 
 # target to build an object file
-include/src/input.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/include/src/input.cpp.o
-.PHONY : include/src/input.cpp.o
+src/input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/input.cpp.o
+.PHONY : src/input.cpp.o
 
-include/src/input.i: include/src/input.cpp.i
-.PHONY : include/src/input.i
+src/input.i: src/input.cpp.i
+.PHONY : src/input.i
 
 # target to preprocess a source file
-include/src/input.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/include/src/input.cpp.i
-.PHONY : include/src/input.cpp.i
+src/input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/input.cpp.i
+.PHONY : src/input.cpp.i
 
-include/src/input.s: include/src/input.cpp.s
-.PHONY : include/src/input.s
+src/input.s: src/input.cpp.s
+.PHONY : src/input.s
 
 # target to generate assembly for a file
-include/src/input.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/include/src/input.cpp.s
-.PHONY : include/src/input.cpp.s
+src/input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/input.cpp.s
+.PHONY : src/input.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpg-proj.dir/build.make CMakeFiles/mpg-proj.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -234,18 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mpg-proj"
-	@echo "... include/src/bezier.o"
-	@echo "... include/src/bezier.i"
-	@echo "... include/src/bezier.s"
-	@echo "... include/src/draw.o"
-	@echo "... include/src/draw.i"
-	@echo "... include/src/draw.s"
-	@echo "... include/src/input.o"
-	@echo "... include/src/input.i"
-	@echo "... include/src/input.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/bezier.o"
+	@echo "... src/bezier.i"
+	@echo "... src/bezier.s"
+	@echo "... src/cube.o"
+	@echo "... src/cube.i"
+	@echo "... src/cube.s"
+	@echo "... src/input.o"
+	@echo "... src/input.i"
+	@echo "... src/input.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
