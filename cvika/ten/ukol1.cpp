@@ -141,7 +141,7 @@ void onDisplay(void) {
   gluQuadricNormals(quadric, GLU_SMOOTH);
   gluQuadricTexture(quadric, GLU_TRUE);
 
-  // Bodovany ukool 1 - vytvorte kouli, nastavte barvu na cervenou a aplikujte
+  // Bodovany ukol 1 - vytvorte kouli, nastavte barvu na cervenou a aplikujte
   // translaci
 
   glDisable(GL_TEXTURE_2D);
