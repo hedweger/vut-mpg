@@ -1,7 +1,6 @@
 #include "input.h"
 #include <GLUT/glut.h>
 #include <cmath>
-#include <iostream>
 
 void InputHandler::normalize(Position_t *v) {
   double len = std::sqrt(v->x * v->x + v->y * v->y + v->z * v->z);
@@ -11,6 +10,8 @@ void InputHandler::normalize(Position_t *v) {
     v->z /= len;
   }
 }
+
+void InputHandler::idle(void) {}
 
 Position_t InputHandler::get_fwd(void) {
   double yawRad = camera.yaw * M_PI / 180.0;
@@ -50,9 +51,6 @@ void InputHandler::update() {
     camera.pos.z -= right.z * SPEED;
   }
 
-  std::cout << "pitch: " << camera.pitch << " yaw: " << camera.yaw << std::endl;
-  std::cout << "x: " << camera.pos.x << " y: " << camera.pos.y
-            << " z: " << camera.pos.z << std::endl;
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
   gluLookAt(camera.pos.x, camera.pos.y, camera.pos.z, // eyes
@@ -64,8 +62,14 @@ void InputHandler::update() {
 }
 
 void InputHandler::pmouse(int x, int y) {
-  camera.yaw = x * SENSITIVITY;
-  camera.pitch = -y * SENSITIVITY;
+  int dx = x - last_x;
+  int dy = y - last_y;
+  last_x = x;
+  last_y = y;
+
+  camera.yaw += dx * SENSITIVITY;
+  camera.pitch += -dy * SENSITIVITY;
+
   if (camera.pitch < -89)
     camera.pitch = -89;
   else if (camera.pitch > 89)
@@ -115,4 +119,6 @@ InputHandler::InputHandler() {
   motion.bwd = 0;
   camera.pitch = 0;
   camera.yaw = 0;
+  win_w = glutGet(GLUT_WINDOW_WIDTH);
+  win_h = glutGet(GLUT_WINDOW_HEIGHT);
 }

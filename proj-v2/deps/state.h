@@ -16,8 +16,10 @@ public:
   void display();
   void update();
   void resize(int w, int h);
+  void idle();
 
   int lastMs = 0;
+  int frame_count = 0;
   GameState_t game;
   InputHandler *input;
   Sun *sun;

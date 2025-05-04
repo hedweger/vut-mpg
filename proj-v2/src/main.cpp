@@ -13,6 +13,7 @@ static void gameInit(void) {
   glEnable(GL_LIGHT0);
   glEnable(GL_COLOR_MATERIAL);
   glShadeModel(GL_SMOOTH);
+  glutSetCursor(GLUT_CURSOR_NONE);
 
   GLfloat ambient[] = {0.2f, 0.2f, 0.2f, 1.0f};
   GLfloat diffuse[] = {0.8f, 0.8f, 0.8f, 1.0f};
@@ -30,14 +31,10 @@ static void gameInit(void) {
       [](unsigned char k, int x, int y) { gstate->input->dkey(k, x, y); });
   glutKeyboardUpFunc(
       [](unsigned char k, int x, int y) { gstate->input->ukey(k, x, y); });
-  glutPassiveMotionFunc([](int x, int y) {
-    gstate->input->pmouse(x, y);
-    // glutWarpPointer(gstate->game.win_w / 2, gstate->game.win_h / 2);
-  });
+  glutPassiveMotionFunc([](int x, int y) { gstate->input->pmouse(x, y); });
   glutDisplayFunc([](void) { gstate->display(); });
   glutReshapeFunc([](int w, int h) { gstate->resize(w, h); });
-
-  // glutIdleFunc(cb_display);
+  // glutIdleFunc([](void) { gstate->idle(); });
 
   if (gstate->game.fullscreen) {
     glutFullScreen();

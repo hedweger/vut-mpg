@@ -2,13 +2,17 @@
 #include "cube.h"
 #include "plane.h"
 #include <GLUT/glut.h>
+#include <iostream>
 
 State::State() {
   game = GameState_t{.win_w = 800, .win_h = 600, .fullscreen = true};
   input = new InputHandler();
   sun = new Sun();
   lastMs = 0;
+  frame_count = 0;
 }
+
+void State::idle(void) {}
 
 void State::display() {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -16,8 +20,13 @@ void State::display() {
 
   update();
   drawPlane(200.0f, 20);
-  drawScaledCube(50, 0, 50, 30);
+  drawScaledCube(50, 40, 50, 30);
   sun->draw();
+
+  if (++frame_count == 60) {
+    input->idle();
+    frame_count = 0;
+  }
 
   glFlush();
   glutSwapBuffers();
@@ -35,8 +44,11 @@ void State::update() {
 }
 
 void State::resize(int w, int h) {
+  std::cout << "resize: " << w << "x" << h << std::endl;
   game.win_w = w;
   game.win_h = h;
+  input->win_w = w;
+  input->win_h = h;
   glViewport(0, 0, w, h);
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
