@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/hedweger/Vut/mgr-second/mpg/proj-v2/deps -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
 
-CXX_FLAGSarm64 = -std=gnu++2b -arch arm64
+CXX_FLAGSx86_64 = -std=gnu++2b -arch x86_64
 
-CXX_FLAGS = -std=gnu++2b -arch arm64
+CXX_FLAGS = -std=gnu++2b -arch x86_64
 
