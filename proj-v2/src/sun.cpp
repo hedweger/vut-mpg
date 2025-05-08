@@ -7,9 +7,11 @@
 #endif
 #include <cmath>
 
+#include "pi.h"
+
 void Sun::draw(void) {
   const float R = 400.0f;
-  float rad = angle * M_PI / 180.0f;
+  float rad = angle * PI / 180.0f;
   float x = R * std::cos(rad);
   float y = R * std::sin(rad);
   float z = 0.0f;

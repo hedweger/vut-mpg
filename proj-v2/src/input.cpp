@@ -8,6 +8,8 @@
 #include <cmath>
 #include <algorithm>
 
+#include "pi.h"
+
 void InputHandler::normalize(Position_t *v) {
   double len = std::sqrt(v->x * v->x + v->y * v->y + v->z * v->z);
   if (len > 1e-6) {
@@ -33,29 +35,29 @@ void InputHandler::toggle_flash(void) {
   GLfloat dif1[] = {1.0f, 1.0f, 1.0f, 1.0f};
   GLfloat spec1[]= {1.0f, 1.0f, 1.0f, 1.0f};
   GLfloat pos1[] = {(float)camera.pos.x, (float)camera.pos.y, (float)camera.pos.z, 1.0f};
-  double yawRad = camera.yaw * M_PI / 180.0;
-  double pitchRad = camera.pitch * M_PI / 180.0;
+  double yawRad = camera.yaw * PI / 180.0;
+  double pitchRad = camera.pitch * PI / 180.0;
   Position_t forward = {
     std::cos(pitchRad) * std::sin(yawRad),
     std::sin(pitchRad),
     -std::cos(pitchRad) * std::cos(yawRad)
   };
-  GLfloat fwd1[] = {(float)forward.x, (float)forward.y, (float)forward.z};
+  GLfloat fwd1[] = { (float)forward.x, (float)forward.y, (float)forward.z };
 
-  glLightfv(GL_LIGHT1, GL_AMBIENT,  amb1);
-  glLightfv(GL_LIGHT1, GL_DIFFUSE,  dif1);
+  glLightfv(GL_LIGHT1, GL_AMBIENT, amb1);
+  glLightfv(GL_LIGHT1, GL_DIFFUSE, dif1);
   glLightfv(GL_LIGHT1, GL_SPECULAR, spec1);
   glLightfv(GL_LIGHT1, GL_POSITION, pos1);
   glLightfv(GL_LIGHT1, GL_SPOT_DIRECTION, fwd1);
-  glLightf(GL_LIGHT1, GL_SPOT_CUTOFF,   10.0f);
+  glLightf(GL_LIGHT1, GL_SPOT_CUTOFF, 10.0f);
   glLightf(GL_LIGHT1, GL_SPOT_EXPONENT, 20.0f);
 }
 
 void InputHandler::idle(void) {}
 
 Position_t InputHandler::get_fwd(void) {
-  double yawRad = camera.yaw * M_PI / 180.0;
-  double pitchRad = camera.pitch * M_PI / 180.0;
+    double yawRad = camera.yaw * PI / 180.0;
+    double pitchRad = camera.pitch * PI / 180.0;
   Position_t forward = {
     std::cos(pitchRad) * std::sin(yawRad),
     std::sin(pitchRad),

@@ -10,6 +10,7 @@
 #include <GL/glut.h>
 #endif
 
+#include "pi.h"
 
 River::River(float w, float planeSize, float ax, float az, float bx, float bz) {
   width = w;
@@ -72,7 +73,7 @@ void River::draw() {
     float cx = aX + t*dx;
     float cz = aZ + t*dz;
 
-    float wave = std::sin(s * 2.0f * M_PI) * halfW;
+    float wave = std::sin(s * 2.0f * PI) * halfW;
     cx += normX * wave;
     cz += normZ * wave;
 

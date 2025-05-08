@@ -1,13 +1,8 @@
 #include "state.h"
 #include "obj_loader.h"
 #include "colors.h"
-#define GL_SILENCE_DEPRECATION
-#ifdef __APPLE__
-#include <GLUT/glut.h>
-#else
-#include <GL/glut.h>
-#endif
 #include <iostream>
+#include <GL/glut.h>
 
 static State *gstate;
 objl::Loader loader;
@@ -69,17 +64,17 @@ static void gameInit(void) {
   glutReshapeFunc([](int w, int h) { gstate->resize(w, h); });
   glutIdleFunc([](void) { gstate->idle(); });
 
-  gstate->loaded = loader.LoadFile("/Users/hedweger/Vut/mgr-second/mpg/proj-v2/assets/Untitled.obj");
+  gstate->loaded = loader.LoadFile("assets/Untitled.obj");
 
-  if (gstate->game.fullscreen) {
-    glutFullScreen();
-  }
+  //if (gstate->game.fullscreen) {
+  //  glutFullScreen();
+  //}
 }
 
 int main(int argc, char **argv) {
   std::cout << "MPG" << std::endl;
-  gstate = new State(draw_tree);
   glutInit(&argc, argv);
+  gstate = new State(draw_tree);
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
   glutInitWindowSize(gstate->game.win_w, gstate->game.win_h);
   glutCreateWindow("MPG");

@@ -13,7 +13,7 @@ House::House(float w, float d, float h, float doorW, float doorH)
     : width(w), depth(d), height(h), doorWidth(doorW), doorHeight(doorH) {}
 
 void House::genImg(void) {
-  if (!setTexture("/Users/hedweger/Vut/mgr-second/mpg/proj-v2/assets/img.bmp",
+  if (!setTexture("assets/img.bmp",
                   &texture[0], false)) {
     std::cout << "Chyba pri nacitani souboru" << std::endl;
     exit((int)0);
