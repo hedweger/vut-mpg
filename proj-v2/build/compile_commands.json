@@ -31,6 +31,18 @@
 },
 {
   "directory": "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build",
+  "command": "/usr/bin/c++  -I/Users/hedweger/Vut/mgr-second/mpg/proj-v2/deps -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -std=gnu++2b -arch arm64 -o CMakeFiles/projmpg.dir/src/projectile.cpp.o -c /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/projectile.cpp",
+  "file": "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/projectile.cpp",
+  "output": "CMakeFiles/projmpg.dir/src/projectile.cpp.o"
+},
+{
+  "directory": "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build",
+  "command": "/usr/bin/c++  -I/Users/hedweger/Vut/mgr-second/mpg/proj-v2/deps -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -std=gnu++2b -arch arm64 -o CMakeFiles/projmpg.dir/src/river.cpp.o -c /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/river.cpp",
+  "file": "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/river.cpp",
+  "output": "CMakeFiles/projmpg.dir/src/river.cpp.o"
+},
+{
+  "directory": "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build",
   "command": "/usr/bin/c++  -I/Users/hedweger/Vut/mgr-second/mpg/proj-v2/deps -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -std=gnu++2b -arch arm64 -o CMakeFiles/projmpg.dir/src/state.cpp.o -c /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/state.cpp",
   "file": "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/state.cpp",
   "output": "CMakeFiles/projmpg.dir/src/state.cpp.o"

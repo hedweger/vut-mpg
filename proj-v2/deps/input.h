@@ -23,24 +23,30 @@ public:
   void dkey(unsigned char key, int x, int y);
   void ukey(unsigned char key, int x, int y);
   void pmouse(int x, int y);
+  void mouse(int x, int y);
   void update(void);
   void compute_pos(void);
   void idle(void);
   void reset(void);
+  void toggle_flash(void);
+  void draw_key();
+  Position_t get_fwd(void);
 
   int win_w, win_h;
   Camera_t camera;
+  bool flashlight;
 
 private:
-  Position_t get_fwd(void);
   Position_t get_right(Position_t forward);
   static void normalize(Position_t *v);
   void warp_pointer(void);
-
+ 
   bool en_mouse;
   int oldx, oldy;
   Motion_t motion;
   Camera_t start;
+  int activePoint;
+  char last_key;
 
   static constexpr float SPEED = 0.5f;
   static constexpr float SENSITIVITY = 0.1f;

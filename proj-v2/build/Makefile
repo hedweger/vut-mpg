@@ -249,6 +249,54 @@ src/plane.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/plane.cpp.s
 .PHONY : src/plane.cpp.s
 
+src/projectile.o: src/projectile.cpp.o
+.PHONY : src/projectile.o
+
+# target to build an object file
+src/projectile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/projectile.cpp.o
+.PHONY : src/projectile.cpp.o
+
+src/projectile.i: src/projectile.cpp.i
+.PHONY : src/projectile.i
+
+# target to preprocess a source file
+src/projectile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/projectile.cpp.i
+.PHONY : src/projectile.cpp.i
+
+src/projectile.s: src/projectile.cpp.s
+.PHONY : src/projectile.s
+
+# target to generate assembly for a file
+src/projectile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/projectile.cpp.s
+.PHONY : src/projectile.cpp.s
+
+src/river.o: src/river.cpp.o
+.PHONY : src/river.o
+
+# target to build an object file
+src/river.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/river.cpp.o
+.PHONY : src/river.cpp.o
+
+src/river.i: src/river.cpp.i
+.PHONY : src/river.i
+
+# target to preprocess a source file
+src/river.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/river.cpp.i
+.PHONY : src/river.cpp.i
+
+src/river.s: src/river.cpp.s
+.PHONY : src/river.s
+
+# target to generate assembly for a file
+src/river.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/river.cpp.s
+.PHONY : src/river.cpp.s
+
 src/state.o: src/state.cpp.o
 .PHONY : src/state.o
 
@@ -321,6 +369,12 @@ help:
 	@echo "... src/plane.o"
 	@echo "... src/plane.i"
 	@echo "... src/plane.s"
+	@echo "... src/projectile.o"
+	@echo "... src/projectile.i"
+	@echo "... src/projectile.s"
+	@echo "... src/river.o"
+	@echo "... src/river.i"
+	@echo "... src/river.s"
 	@echo "... src/state.o"
 	@echo "... src/state.i"
 	@echo "... src/state.s"

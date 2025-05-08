@@ -13,6 +13,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/input.cpp" "CMakeFiles/projmpg.dir/src/input.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/input.cpp.o.d"
   "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/main.cpp" "CMakeFiles/projmpg.dir/src/main.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/main.cpp.o.d"
   "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/plane.cpp" "CMakeFiles/projmpg.dir/src/plane.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/plane.cpp.o.d"
+  "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/projectile.cpp" "CMakeFiles/projmpg.dir/src/projectile.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/projectile.cpp.o.d"
+  "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/river.cpp" "CMakeFiles/projmpg.dir/src/river.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/river.cpp.o.d"
   "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/state.cpp" "CMakeFiles/projmpg.dir/src/state.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/state.cpp.o.d"
   "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/sun.cpp" "CMakeFiles/projmpg.dir/src/sun.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/sun.cpp.o.d"
   )

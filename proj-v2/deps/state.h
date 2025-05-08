@@ -1,10 +1,13 @@
 #ifndef STATE_H_
 #define STATE_H_
 #include "cube.h"
-#include "house.h"
+#include "river.h"
 #include "input.h"
 #include "sun.h"
+#include "house.h"
 #include <stdbool.h>
+#include "projectile.h"
+#include <vector>
 
 typedef struct GameState_t {
   int win_w;
@@ -14,7 +17,7 @@ typedef struct GameState_t {
 
 typedef enum GameMenu_t {
   RESET_POS,
-  TOGGLE_ANIM,
+  FLASHLIGHT,
   TOGGLE_TEXTURE,
   TOGGLE_SUN,
   EXIT,
@@ -22,13 +25,15 @@ typedef enum GameMenu_t {
 
 class State {
 public:
-  State();
+  State(void (*dt)(void));
   void display();
   void update();
   void resize(int w, int h);
   void idle();
   void on_menu(int value);
+  void shoot(void);
 
+  bool loaded;
   int lastMs = 0;
   int frame_count = 0;
   GameState_t game;
@@ -36,8 +41,12 @@ public:
   Sun *sun;
   House *house;
   Cube *cube;
+  River *river;
+  void (*draw_tree)(void);
 
 private:
+  std::vector<Projectile*> projectiles;
+  const float planeSize = 400.0f;
   const float camRadius = 2.0f;
   bool en_textures = true;
   bool en_sun = true;

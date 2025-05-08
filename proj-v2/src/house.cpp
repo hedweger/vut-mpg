@@ -120,9 +120,17 @@ void House::drawWalls() {
   float winZMin = -winSize * 0.5f;
   float winZMax = winSize * 0.5f;
 
-  glColor3f(1.0f, 1.0f, 1.0f);
   glBegin(GL_QUADS);
+  // Floor
+    glNormal3f(0,1,0);
+  glColor3f(0.8f, 0.4f, 0.2f);
+  glVertex3f(halfW, minY+0.1f, halfD);
+  glVertex3f(-halfW, minY+0.1f, halfD);
+  glVertex3f(-halfW, minY+0.1f, -halfD);
+  glVertex3f(halfW, minY+0.1f, -halfD);
+  glColor3f(1.0f, 1.0f, 1.0f);
   // Front wall left of door
+  glNormal3f(0,0,-1);
   glVertex3f(-halfW, minY, -halfD);
   glVertex3f(-doorWidth * 0.5f, minY, -halfD);
   glVertex3f(-doorWidth * 0.5f, doorHeight, -halfD);
@@ -141,12 +149,14 @@ void House::drawWalls() {
   glVertex3f(-halfW, height, -halfD);
 
   // Back wall
+    glNormal3f(0,0,1);
   glVertex3f(-halfW, minY, halfD);
   glVertex3f(halfW, minY, halfD);
   glVertex3f(halfW, height, halfD);
   glVertex3f(-halfW, height, halfD);
 
   // Left wall
+    glNormal3f(-1,0,0);
   glVertex3f(-halfW, minY, -halfD);
   glVertex3f(-halfW, minY, halfD);
   glVertex3f(-halfW, height, halfD);
@@ -203,7 +213,7 @@ void House::drawRoof() {
 
   // Front triangle
   glBegin(GL_TRIANGLES);
-  glNormal3f(0, roofH, 1);
+  glNormal3f(0, 0, 1);
   glVertex3f(-halfW, height, halfD);
   glVertex3f(halfW, height, halfD);
   glVertex3f(0.0f, peakY, halfD);
@@ -211,7 +221,7 @@ void House::drawRoof() {
 
   // Back triangle
   glBegin(GL_TRIANGLES);
-  glNormal3f(0, roofH, -1);
+  glNormal3f(0, 0, -1);
   glVertex3f(halfW, height, -halfD);
   glVertex3f(-halfW, height, -halfD);
   glVertex3f(0.0f, peakY, -halfD);

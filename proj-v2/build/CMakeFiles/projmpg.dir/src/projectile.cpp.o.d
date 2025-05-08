@@ -1,7 +1,7 @@
-CMakeFiles/projmpg.dir/src/plane.cpp.o: \
-  /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/plane.cpp \
-  /Users/hedweger/Vut/mgr-second/mpg/proj-v2/deps/plane.h \
-  /Users/hedweger/Vut/mgr-second/mpg/proj-v2/deps/colors.h \
+CMakeFiles/projmpg.dir/src/projectile.cpp.o: \
+  /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/projectile.cpp \
+  /Users/hedweger/Vut/mgr-second/mpg/proj-v2/deps/projectile.h \
+  /Users/hedweger/Vut/mgr-second/mpg/proj-v2/deps/input.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/os/availability.h \

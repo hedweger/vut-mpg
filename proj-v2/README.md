@@ -1,6 +1,6 @@
-### Total : 16 b
-- [x] Animace (1 b) 
-- [x] Osvětlení (1 b) 
+### Total : 18 b
+- [x] Animace (1 b) -- Slunce se pohybuje po obloze
+- [x] Osvětlení (1 b)  -- Slunce
 - [x] Volný pohyb v horizontální rovině (1 b) 
 - [x] Menu (2 b) 
 - [x] Létání (2 b) 
@@ -9,8 +9,8 @@
 - [x] Neprůchozí objekt (2 b) 
 - [x] Texturování (2 b) 
 - [x] Průhlednost (1 b) 
+- [x] Ruční svítilna (2 b) 
 - [ ] Výpis textu (2 b) 
-- [ ] Ruční svítilna (2 b) 
 - [ ] Blender model (2 b) 
 - [ ] Hod předmětu (2 b) 
 - [ ] Simulace kroků (2 b) 

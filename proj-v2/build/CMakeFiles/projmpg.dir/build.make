@@ -142,10 +142,38 @@ CMakeFiles/projmpg.dir/src/plane.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/projmpg.dir/src/plane.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/plane.cpp -o CMakeFiles/projmpg.dir/src/plane.cpp.s
 
+CMakeFiles/projmpg.dir/src/projectile.cpp.o: CMakeFiles/projmpg.dir/flags.make
+CMakeFiles/projmpg.dir/src/projectile.cpp.o: /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/projectile.cpp
+CMakeFiles/projmpg.dir/src/projectile.cpp.o: CMakeFiles/projmpg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/projmpg.dir/src/projectile.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projmpg.dir/src/projectile.cpp.o -MF CMakeFiles/projmpg.dir/src/projectile.cpp.o.d -o CMakeFiles/projmpg.dir/src/projectile.cpp.o -c /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/projectile.cpp
+
+CMakeFiles/projmpg.dir/src/projectile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/projmpg.dir/src/projectile.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/projectile.cpp > CMakeFiles/projmpg.dir/src/projectile.cpp.i
+
+CMakeFiles/projmpg.dir/src/projectile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/projmpg.dir/src/projectile.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/projectile.cpp -o CMakeFiles/projmpg.dir/src/projectile.cpp.s
+
+CMakeFiles/projmpg.dir/src/river.cpp.o: CMakeFiles/projmpg.dir/flags.make
+CMakeFiles/projmpg.dir/src/river.cpp.o: /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/river.cpp
+CMakeFiles/projmpg.dir/src/river.cpp.o: CMakeFiles/projmpg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projmpg.dir/src/river.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projmpg.dir/src/river.cpp.o -MF CMakeFiles/projmpg.dir/src/river.cpp.o.d -o CMakeFiles/projmpg.dir/src/river.cpp.o -c /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/river.cpp
+
+CMakeFiles/projmpg.dir/src/river.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/projmpg.dir/src/river.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/river.cpp > CMakeFiles/projmpg.dir/src/river.cpp.i
+
+CMakeFiles/projmpg.dir/src/river.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/projmpg.dir/src/river.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/river.cpp -o CMakeFiles/projmpg.dir/src/river.cpp.s
+
 CMakeFiles/projmpg.dir/src/state.cpp.o: CMakeFiles/projmpg.dir/flags.make
 CMakeFiles/projmpg.dir/src/state.cpp.o: /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/state.cpp
 CMakeFiles/projmpg.dir/src/state.cpp.o: CMakeFiles/projmpg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/projmpg.dir/src/state.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/projmpg.dir/src/state.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projmpg.dir/src/state.cpp.o -MF CMakeFiles/projmpg.dir/src/state.cpp.o.d -o CMakeFiles/projmpg.dir/src/state.cpp.o -c /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/state.cpp
 
 CMakeFiles/projmpg.dir/src/state.cpp.i: cmake_force
@@ -159,7 +187,7 @@ CMakeFiles/projmpg.dir/src/state.cpp.s: cmake_force
 CMakeFiles/projmpg.dir/src/sun.cpp.o: CMakeFiles/projmpg.dir/flags.make
 CMakeFiles/projmpg.dir/src/sun.cpp.o: /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/sun.cpp
 CMakeFiles/projmpg.dir/src/sun.cpp.o: CMakeFiles/projmpg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projmpg.dir/src/sun.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/projmpg.dir/src/sun.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projmpg.dir/src/sun.cpp.o -MF CMakeFiles/projmpg.dir/src/sun.cpp.o.d -o CMakeFiles/projmpg.dir/src/sun.cpp.o -c /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/sun.cpp
 
 CMakeFiles/projmpg.dir/src/sun.cpp.i: cmake_force
@@ -177,6 +205,8 @@ projmpg_OBJECTS = \
 "CMakeFiles/projmpg.dir/src/input.cpp.o" \
 "CMakeFiles/projmpg.dir/src/main.cpp.o" \
 "CMakeFiles/projmpg.dir/src/plane.cpp.o" \
+"CMakeFiles/projmpg.dir/src/projectile.cpp.o" \
+"CMakeFiles/projmpg.dir/src/river.cpp.o" \
 "CMakeFiles/projmpg.dir/src/state.cpp.o" \
 "CMakeFiles/projmpg.dir/src/sun.cpp.o"
 
@@ -188,11 +218,13 @@ projmpg: CMakeFiles/projmpg.dir/src/house.cpp.o
 projmpg: CMakeFiles/projmpg.dir/src/input.cpp.o
 projmpg: CMakeFiles/projmpg.dir/src/main.cpp.o
 projmpg: CMakeFiles/projmpg.dir/src/plane.cpp.o
+projmpg: CMakeFiles/projmpg.dir/src/projectile.cpp.o
+projmpg: CMakeFiles/projmpg.dir/src/river.cpp.o
 projmpg: CMakeFiles/projmpg.dir/src/state.cpp.o
 projmpg: CMakeFiles/projmpg.dir/src/sun.cpp.o
 projmpg: CMakeFiles/projmpg.dir/build.make
 projmpg: CMakeFiles/projmpg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable projmpg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable projmpg"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/projmpg.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,13 +1,37 @@
 #include "state.h"
-#include <iostream>
+#include "obj_loader.h"
+#include "colors.h"
 #define GL_SILENCE_DEPRECATION
 #include <GLUT/glut.h>
+#include <iostream>
 
 static State *gstate;
+objl::Loader loader;
+GLuint texture[1];
+
+void draw_tree(void) {
+  glPushMatrix();
+  glTranslatef(100.0f, -5.0f, 50.0f);
+  glScalef(10.0f, 10.0f, 10.0f);
+
+  for (int i = 0; i < loader.LoadedMeshes.size(); i++) {
+    objl::Mesh mesh = loader.LoadedMeshes[i];
+    int meshSize = mesh.Vertices.size();
+    glBegin(GL_TRIANGLES);
+    for (int j = 0; j < meshSize ; j++) {
+      glTexCoord2f(mesh.Vertices[j].TextureCoordinate.X, mesh.Vertices[j].TextureCoordinate.Y);
+      glNormal3f(mesh.Vertices[j].Normal.X, mesh.Vertices[j].Normal.Y, mesh.Vertices[j].Normal.Z);
+      glVertex3f(mesh.Vertices[j].Position.X, mesh.Vertices[j].Position.Y, mesh.Vertices[j].Position.Z);
+    }
+    glEnd();
+  }
+  glPopMatrix();
+}
 
 void menu() {
   glutCreateMenu([](int value) { gstate->on_menu(value); });
   glutAddMenuEntry("Resetovat pozici", GameMenu_t::RESET_POS);
+  glutAddMenuEntry("Vypnout/zapnout svetlo", GameMenu_t::FLASHLIGHT);
   glutAddMenuEntry("Vypnout/zapnout textury", GameMenu_t::TOGGLE_TEXTURE);
   glutAddMenuEntry("Vypnout/zapnout pohyb slunce", GameMenu_t::TOGGLE_SUN);
   glutAddMenuEntry("Ukončit", GameMenu_t::EXIT);
@@ -25,28 +49,23 @@ static void gameInit(void) {
   glEnable(GL_COLOR_MATERIAL);
   glShadeModel(GL_SMOOTH);
   glEnable(GL_TEXTURE_2D);
-  // glutSetCursor(GLUT_CURSOR_NONE);
-
-  GLfloat ambient[] = {0.2f, 0.2f, 0.2f, 1.0f};
-  GLfloat diffuse[] = {0.8f, 0.8f, 0.8f, 1.0f};
-  GLfloat specular[] = {1.0f, 1.0f, 1.0f, 1.0f};
-  GLfloat position[] = {0.0f, 50.0f, 50.0f, 1.0f};
-
-  glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
-  glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
-  glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
-  glLightfv(GL_LIGHT0, GL_POSITION, position);
-
-  glClearColor(0.2, 0.6, 1.0, 1.0);
+  glClearColor(sky.r, sky.g, sky.b, 1.0f);
 
   glutKeyboardFunc(
       [](unsigned char k, int x, int y) { gstate->input->dkey(k, x, y); });
   glutKeyboardUpFunc(
-      [](unsigned char k, int x, int y) { gstate->input->ukey(k, x, y); });
+      [](unsigned char k, int x, int y) { 
+      gstate->input->ukey(k, x, y); 
+      if (k == ' ') {              
+        gstate->shoot();
+      }
+  });
   glutPassiveMotionFunc([](int x, int y) { gstate->input->pmouse(x, y); });
   glutDisplayFunc([](void) { gstate->display(); });
   glutReshapeFunc([](int w, int h) { gstate->resize(w, h); });
   glutIdleFunc([](void) { gstate->idle(); });
+
+  gstate->loaded = loader.LoadFile("/Users/hedweger/Vut/mgr-second/mpg/proj-v2/assets/Untitled.obj");
 
   if (gstate->game.fullscreen) {
     glutFullScreen();
@@ -55,7 +74,7 @@ static void gameInit(void) {
 
 int main(int argc, char **argv) {
   std::cout << "MPG" << std::endl;
-  gstate = new State();
+  gstate = new State(draw_tree);
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
   glutInitWindowSize(gstate->game.win_w, gstate->game.win_h);
