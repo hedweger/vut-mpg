@@ -1,0 +1,3 @@
+/opt/homebrew/bin/cmake -E rm -f CMakeFiles/projmpg.dir/objects.a
+/opt/homebrew/opt/mingw-w64/bin/x86_64-w64-mingw32-ar qc CMakeFiles/projmpg.dir/objects.a @CMakeFiles/projmpg.dir/objects1.rsp
+/opt/homebrew/opt/mingw-w64/bin/x86_64-w64-mingw32-g++ -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles/projmpg.dir/objects.a -Wl,--no-whole-archive -o projmpg.exe -Wl,--out-implib,libprojmpg.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/projmpg.dir/linkLibs.rsp

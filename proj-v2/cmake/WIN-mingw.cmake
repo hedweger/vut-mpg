@@ -16,21 +16,14 @@ set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY  ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE  ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE  ONLY)
 
-find_package(OpenGL REQUIRED)
+#set(OPENGL_INCLUDE_DIR ${CMAKE_FIND_ROOT_PATH}/include)
+#set(OPENGL_gl_LIBRARY ${CMAKE_FIND_ROOT_PATH}/lib/libopengl32.a)
+#set(OPENGL_glu_LIBRARY ${CMAKE_FIND_ROOT_PATH}/lib/libglu32.a)
+
 find_path(GLUT_INCLUDE_DIR GLUT/glut.h
     HINTS "${CMAKE_FIND_ROOT_PATH}/include"
 )
 find_library(GLUT_LIBRARY
     NAMES freeglut glut32
     HINTS "${CMAKE_FIND_ROOT_PATH}/lib"
-)
-target_include_directories(projmpg PRIVATE
-  ${GLUT_INCLUDE_DIR}     # so <GL/glut.h> is found
-)
-target_link_libraries(projmpg PRIVATE
-  OpenGL::GL              # links -lopengl32
-  ${GLUT_LIBRARY}         # links -lfreeglut or -lglut32
-  glu32                   # GLU on Windows
-  winmm                   # WinMM is often needed by GLUT
-  gdi32                   # GDI is needed for windowing
 )
