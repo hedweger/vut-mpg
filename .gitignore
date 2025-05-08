@@ -1,2 +1,8 @@
 cmake/*
-
+**/cmake/*
+CMakeFiles/
+**/CMakeFiles/
+nupengl/
+**/nupengl/
+build/
+**/build/
