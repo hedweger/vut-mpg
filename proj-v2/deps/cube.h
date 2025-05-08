@@ -1,7 +1,11 @@
 #ifndef CUBE_H_
 #define CUBE_H_
 #define GL_SILENCE_DEPRECATION
-#include "GLUT/glut.h"
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
 
 class Cube {
 public:

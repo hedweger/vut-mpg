@@ -1,6 +1,4 @@
 #include "cube.h"
-#define GL_SILENCE_DEPRECATION
-#include <GLUT/glut.h>
 #include <vector>
 
 // Build a 64×64 black-&-white checker and upload it after GL context exists

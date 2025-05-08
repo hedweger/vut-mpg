@@ -2,7 +2,12 @@
 #define INPUT_H_
 #define PI 3.141592653589
 #define GL_SILENCE_DEPRECATION
+#ifdef __APPLE__
 #include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
+
 
 typedef struct Position_t {
   double x, y, z;

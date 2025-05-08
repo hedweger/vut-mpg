@@ -4,7 +4,12 @@
 #include <algorithm>
 #include <vector>
 #define GL_SILENCE_DEPRECATION
+#ifdef __APPLE__
 #include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
+
 
 River::River(float w, float planeSize, float ax, float az, float bx, float bz) {
   width = w;
