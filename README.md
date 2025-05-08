@@ -14,7 +14,7 @@ Dále jde taky využít už zkompilovaného binárního souboru v releases: [lin
 * Mezerník - vystřelení sněhové koule
 * r - zapnutí flashlight
 
-
+## Zadání
 - Modelování objektů 
 - Animace 
 - Osvětlení 
