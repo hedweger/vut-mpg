@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/cube.cpp" "CMakeFiles/projmpg.dir/src/cube.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/cube.cpp.o.d"
+  "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/house.cpp" "CMakeFiles/projmpg.dir/src/house.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/house.cpp.o.d"
   "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/input.cpp" "CMakeFiles/projmpg.dir/src/input.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/input.cpp.o.d"
   "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/main.cpp" "CMakeFiles/projmpg.dir/src/main.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/main.cpp.o.d"
   "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/plane.cpp" "CMakeFiles/projmpg.dir/src/plane.cpp.o" "gcc" "CMakeFiles/projmpg.dir/src/plane.cpp.o.d"

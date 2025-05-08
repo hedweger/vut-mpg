@@ -1,7 +1,16 @@
-#ifndef _DRAW_H_
-#define _DRAW_H_
+#ifndef CUBE_H_
+#define CUBE_H_
+#define GL_SILENCE_DEPRECATION
+#include "GLUT/glut.h"
 
-void drawUnitCube(void);
-void drawScaledCube(float x, float y, float z, float size);
+class Cube {
+public:
+  void draw(float x, float y, float z, float size, bool texture);
+  void genTexture(void);
+
+private:
+  GLuint codeTexture;
+  void drawUnitCube(void);
+};
 
 #endif

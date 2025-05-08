@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/projmpg.dir/src/cube.cpp.o"
   "CMakeFiles/projmpg.dir/src/cube.cpp.o.d"
+  "CMakeFiles/projmpg.dir/src/house.cpp.o"
+  "CMakeFiles/projmpg.dir/src/house.cpp.o.d"
   "CMakeFiles/projmpg.dir/src/input.cpp.o"
   "CMakeFiles/projmpg.dir/src/input.cpp.o.d"
   "CMakeFiles/projmpg.dir/src/main.cpp.o"

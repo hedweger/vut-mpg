@@ -7,6 +7,12 @@
 },
 {
   "directory": "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build",
+  "command": "/usr/bin/c++  -I/Users/hedweger/Vut/mgr-second/mpg/proj-v2/deps -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -std=gnu++2b -arch arm64 -o CMakeFiles/projmpg.dir/src/house.cpp.o -c /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/house.cpp",
+  "file": "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/house.cpp",
+  "output": "CMakeFiles/projmpg.dir/src/house.cpp.o"
+},
+{
+  "directory": "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/build",
   "command": "/usr/bin/c++  -I/Users/hedweger/Vut/mgr-second/mpg/proj-v2/deps -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -std=gnu++2b -arch arm64 -o CMakeFiles/projmpg.dir/src/input.cpp.o -c /Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/input.cpp",
   "file": "/Users/hedweger/Vut/mgr-second/mpg/proj-v2/src/input.cpp",
   "output": "CMakeFiles/projmpg.dir/src/input.cpp.o"

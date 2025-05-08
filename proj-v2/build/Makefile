@@ -153,6 +153,30 @@ src/cube.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/cube.cpp.s
 .PHONY : src/cube.cpp.s
 
+src/house.o: src/house.cpp.o
+.PHONY : src/house.o
+
+# target to build an object file
+src/house.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/house.cpp.o
+.PHONY : src/house.cpp.o
+
+src/house.i: src/house.cpp.i
+.PHONY : src/house.i
+
+# target to preprocess a source file
+src/house.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/house.cpp.i
+.PHONY : src/house.cpp.i
+
+src/house.s: src/house.cpp.s
+.PHONY : src/house.s
+
+# target to generate assembly for a file
+src/house.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projmpg.dir/build.make CMakeFiles/projmpg.dir/src/house.cpp.s
+.PHONY : src/house.cpp.s
+
 src/input.o: src/input.cpp.o
 .PHONY : src/input.o
 
@@ -285,6 +309,9 @@ help:
 	@echo "... src/cube.o"
 	@echo "... src/cube.i"
 	@echo "... src/cube.s"
+	@echo "... src/house.o"
+	@echo "... src/house.i"
+	@echo "... src/house.s"
 	@echo "... src/input.o"
 	@echo "... src/input.i"
 	@echo "... src/input.s"

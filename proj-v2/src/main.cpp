@@ -1,7 +1,18 @@
 #include "state.h"
+#include <iostream>
+#define GL_SILENCE_DEPRECATION
 #include <GLUT/glut.h>
 
 static State *gstate;
+
+void menu() {
+  glutCreateMenu([](int value) { gstate->on_menu(value); });
+  glutAddMenuEntry("Resetovat pozici", GameMenu_t::RESET_POS);
+  glutAddMenuEntry("Vypnout/zapnout textury", GameMenu_t::TOGGLE_TEXTURE);
+  glutAddMenuEntry("Vypnout/zapnout pohyb slunce", GameMenu_t::TOGGLE_SUN);
+  glutAddMenuEntry("Ukončit", GameMenu_t::EXIT);
+  glutAttachMenu(GLUT_RIGHT_BUTTON);
+}
 
 static void gameInit(void) {
   glutWarpPointer(gstate->game.win_w / 2, gstate->game.win_h / 2);
@@ -13,7 +24,8 @@ static void gameInit(void) {
   glEnable(GL_LIGHT0);
   glEnable(GL_COLOR_MATERIAL);
   glShadeModel(GL_SMOOTH);
-  glutSetCursor(GLUT_CURSOR_NONE);
+  glEnable(GL_TEXTURE_2D);
+  // glutSetCursor(GLUT_CURSOR_NONE);
 
   GLfloat ambient[] = {0.2f, 0.2f, 0.2f, 1.0f};
   GLfloat diffuse[] = {0.8f, 0.8f, 0.8f, 1.0f};
@@ -34,7 +46,7 @@ static void gameInit(void) {
   glutPassiveMotionFunc([](int x, int y) { gstate->input->pmouse(x, y); });
   glutDisplayFunc([](void) { gstate->display(); });
   glutReshapeFunc([](int w, int h) { gstate->resize(w, h); });
-  // glutIdleFunc([](void) { gstate->idle(); });
+  glutIdleFunc([](void) { gstate->idle(); });
 
   if (gstate->game.fullscreen) {
     glutFullScreen();
@@ -42,12 +54,15 @@ static void gameInit(void) {
 }
 
 int main(int argc, char **argv) {
+  std::cout << "MPG" << std::endl;
   gstate = new State();
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
   glutInitWindowSize(gstate->game.win_w, gstate->game.win_h);
   glutCreateWindow("MPG");
+  std::cout << "GL context created" << std::endl;
 
+  menu();
   gameInit();
   glutMainLoop();
 
